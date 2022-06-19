@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/db_utils.dart';
 
-Widget addGoalDialog(int id) {
+Widget addGoalDialog(int id, context) {
   TextEditingController title = TextEditingController();
   TextEditingController goalc = TextEditingController();
   TextEditingController stepc = TextEditingController();
@@ -61,6 +61,7 @@ Widget addGoalDialog(int id) {
                   ];
 
                   setGoal(id, g);
+                  Navigator.pop(context);
                 },
                 child: Container(
                   width: 130,

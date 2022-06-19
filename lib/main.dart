@@ -112,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () => showDialog(
                     context: context,
                     builder: (BuildContext context) {
-                      return addGoalDialog(lastId + 1);
+                      return addGoalDialog(lastId + 1, context);
                     }).then((_) => setState(() {})),
                 tooltip: 'Add Goal',
                 child: const Icon(Icons.add),
